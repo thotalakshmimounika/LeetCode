@@ -13,13 +13,12 @@ class Solution:
                 max_score=max(max_score,curr_score)
                 i+=1
                 
+            elif curr_score>=1:
+                curr_score-=1
+                curr_power+=tokens[j]
+                j-=1
             else:
-                if curr_score>=1:
-                    curr_score-=1
-                    curr_power+=tokens[j]
-                    j-=1
-                else:
-                    break
+                break
 
         return max_score
 
